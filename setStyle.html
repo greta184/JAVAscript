@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>   
+    <style>
+    </style>
+</head>
+<body>  
+    <div id="div1">Hello world</div>
+    <div id="div2">Hello oh my</div>
+    <div id="div3">Hello very hello</div>
+    
+    <script>        
+        function sum(a, b){
+            // input + validation           
+            let checkA = ((typeof(a) === "number") && (isFinite(a)));
+            let checkB = ((typeof(b) === "number") && (isFinite(b)));
+            if (!checkA || !checkB){
+                return undefined;   
+            }                   
+            // algorithm = logic            
+            let sum = a + b;
+            
+            // output               
+            return sum;
+        }
+        
+        function setStyle(id, prop, value){
+            // Užduotis: modifikuoti galima tik funkcijos setStyle viduje esantį kodą; kodo už šios funkcijos ribų liesti negalima, įskaitant testus žemiau. Tikslas - padaryti kad konsolėje nėra "raudonų klaidų".        
+        
+            // input
+            let checkId = typeof (id) == "string" || typeof (id) == "undefined";
+            let checkProp = typeof (prop) == "string" || typeof (id) == "undefined";
+            let checkValue = typeof (value) == "string" || typeof (id) == "undefined";
+            
+            if(!checkId || !checkProp || !checkValue)
+                return undefined;
+            
+            // algorithm
+            let elem = document.getElementById(id);
+            if (elem != null){
+                elem.style[prop] = value;           
+            }           
+            // output       
+            return (elem != null) ? elem.style : null;          
+            
+            // Nuo šitos vietos kodo modifikuoti neleidžiama
+        }
+                
+        setStyle("div", "color", "orange");
+        setStyle("div1", "color", "red");
+        
+        // Reikia padaryti, kad žemiau esančios eilutės veiktų
+        setStyle("div2").color = "green"; 
+        setStyle("div3").color = "blue";        
+        
+        // Problema - funkciją turi būti galima naudoti ir nenurodžius antro (prop) bei trečio (value) parametrų; dabar funkcija neleidžia kad jie būtų undefined. Reikia leisti, ir padaryti, kad jei jie undefined - 42 eilutė nevykdoma, o funkcija tiesiog grąžina stilių (45 eil.), kurį vėliau galima naudoti (žr. 54-55 eil.). Dabar jos neveikia, nes funkcija grąžina undefined, ir negalima sakyti undefined.color = ...
+    </script>       
+</body>
+</html>

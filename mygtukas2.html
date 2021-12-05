@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.content {
+  display: none;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+<button type="button" class="collapsible">Show</button>
+<div class="content">
+ <ul>
+     <li><a href="#">link1</a> </li>
+     <li><a href="#">link2</a> </li>
+     <li><a href="#">link3</a> </li>
+     <li><a href="#">link4</a> </li>
+     <li><a href="#">link5</a> </li>
+ </ul>
+</div>
+
+<script>
+    
+let coll = document.getElementsByClassName("collapsible");
+let i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
