@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // 1.uzdavinys
+        let n = [];
+        for(let i = 0; i<30; i++){
+            n[i] = Math.floor(Math.random() * (25 -5 +1)) + 5;
+            // n.push(Math.floor(Math.random() * (25 -5 +1)) + 5);
+        }
+        console.log(n)
+
+    //    2.uzdavinys 
+// a. uzdavinys
+
+        let reiksmiudaugiauuz10 = 0;
+        let nilgis = n.length;
+        for(let i = 0; i < nilgis; ++i) 
+        {
+            if(n[i]>10){
+                reiksmiudaugiauuz10++;
+            }
+        }
+        // console.log("masyve reiksmiu didesniu uz 10 yra " + reiksmiudaugiauuz10 );
+
+    // b. uzdavinys
+
+        // let didziausiareiksme = 0;
+        // let didziausiareiksmeIndex= [];
+        // for(i=0; i < nilgis; ++i ){
+        //     if(n[i] > didziausiareiksme){
+        //         didziausiareiksme = n[i];
+
+        //     }
+        // }
+        // for(i=0; i < nilgis; ++i ){
+        //     if(n[i] == didziausiareiksme){
+        //         didziausiareiksmeIndex.push(i);
+
+        //     }
+        // }
+        // console.log("didiziausia reiksme yra:" +didziausiareiksme)
+        // console.log("didizuaisi reiksmiu indeksai yra:" +didziausiareiksmeIndex)
+
+
+        // for(i=0; i<nilgis; ++i){
+        //     if (n[i]>didziausiareiksme){
+        //         didziausiareiksme = n[i];
+        //         didziausiareiksmeIndex = [];
+        //         didziausiareiksmeIndex.push(i);
+        //     }
+        //     else if(n[i] == didziausiareiksme){
+        //         didziausiareiksmeIndex.push(i);
+        //     }
+        // }
+        // console.log("didiziausia reiksme yra:" +didziausiareiksme)
+        // console.log("didizuaisi reiksmiu indeksai yra:" +didziausiareiksmeIndex)
+
+        // c.uzdavinys
+
+        // let indeksusuma = 0;
+        // for(i=0; i < nilgis; i+=2) {
+        //     // if(i%2==0){
+        //         indeksusuma += i;
+        //     // }
+        // }
+        // console.log("indeksu suma:" + indeksusuma)
+
+        // d. uzdavinys
+
+        // let newArray = [];
+        // for(i=0; i < nilgis; i++){
+        //     newArray.push(n[i]-i);
+        // }
+        // console.log("pradinis masyvas minus indeksai yra:" + newArray);
+
+        // e.uzdavinys
+
+        // for(i=0; i<0; i++){
+        //     n.push(Math.floor(Math.random() * (25 -5 +1)) + 5);
+        // }
+        // console.log("papildymas" + n)
+
+        // for(i=nilgis; i< nilgis+10; i++){
+        //     n[i]=Math.floor(Math.random() * (25 -5 +1)) + 5;
+        // }
+        //     let pushableArray = [];
+        // for( i = 0; i<10; ++i){
+        //     pushableArray.push(Math.floor(Math.random() * (25 -5 +1)) + 5);
+        // } n.push(pushableArray);
+
+            // f. uzdaviys
+
+        // let odd = [];
+        // let even = [];
+        // for (i=0; i<n.length; i++){
+        //     if(i % 2 === 0){
+        //         even.push(n[i]);
+        //     } else {
+        //         odd.push(n[i]);
+        //     }
+        // }
+
+        // console.log("lyginiu indeksu masyvas:" + even);
+        // console.log("nelyginiu indeksu masyvas:" + odd);
+
+        // g. uzdavinys
+
+        // for(i = 0; i < n.length; i++){
+        //     if(i%2 === 0 ){
+        //         if(n[i]>15){
+        //             n[i] = 0;
+        //         }
+        //     }
+        // }
+        // console.log("g dalis:" +n)
+
+        // h. uzdavinys
+
+        let maziausiasindex = -1;
+        for( i = 0; i < nilgis; ++i){
+            if (n[i]>10){
+                maziausiasindex = i;
+            }
+        }
+        console.log("maziausias indeksas" + maziausiasindex)
+
+    </script>
+    
+</body>
+</html>
